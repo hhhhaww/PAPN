@@ -1,0 +1,44 @@
+base:
+  seed: 100
+  log_path: 'log/papn_cub'
+  resume_path: null
+
+data:
+  data_path: './dataset/cub'
+  num_class: 200
+  num_workers: 16
+
+model:
+  name: 'PAPN'
+  params:
+    base_encoder: 'resnet50'
+    proj_dim: 256
+    layer_proj_dim: 128
+    layer_names: ['layer2', 'layer3', 'layer4']
+    K: 4096
+    m: 0.999
+    T: 0.15
+    n_parts: 5
+    # download from https://download.pytorch.org/models/resnet50-11ad3fa6.pth
+    pretrain: 'pretrain/resnet50-11ad3fa6.pth'
+
+train:
+  train_aug: 'linear_aug'
+  s: [0.45, 0.7, 0.95]
+  q_scale: [0.2, 0.7]
+  k_scale: [0.7, 1]
+  val_aug: 'val_aug'
+  batch_size: 128
+  epochs: 100
+  check_every_batch: 32
+  save_every_epoch: 20
+  amp: false
+  lr: 0.03
+
+test:
+  train_aug: 'train_aug'
+  val_aug: 'val_aug'
+  lr: 0.03
+  batch_size: 256
+  epochs: 100
+  model_path: null
