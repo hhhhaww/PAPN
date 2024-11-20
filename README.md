@@ -20,7 +20,7 @@ Then you should run the following commands:
 cd PAPN
 python ./utils/convert_cub.py -p path_of_cub.zip
 python ./utils/convert_car.py -p path_of_car.zip
-python ./utils/convert_air.py -p path_of_air.zi
+python ./utils/convert_air.py -p path_of_air.zip
 ```
 
 The final datasets structure are as follows:
