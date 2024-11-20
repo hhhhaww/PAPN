@@ -58,7 +58,7 @@ python main_train.py -c configs/papn_cub.yaml
 
 - The running commands for linear probing and retrieval:
 
-```
+```bash
 python main_lincls.py -c configs/papn_air.yaml
 python main_lincls.py -c configs/papn_car.yaml
 python main_lincls.py -c configs/papn_cub.yaml
