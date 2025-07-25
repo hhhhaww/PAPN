@@ -1,5 +1,7 @@
 # PAPN
 
+![](./frame.jpg)
+
 ## Abstract
 
 In this paper, we mitigate the problem of Self-Supervised Learning (SSL) for fine-grained representation learning, aimed at distinguishing subtle differences within highly similar subordinate categories. Our preliminary analysis shows that SSL, especially the multi-stage alignment strategy, performs well on generic categories but struggles with fine-grained distinctions. To overcome this limitation, we propose a prototype-based contrastive learning module with stage-wise progressive augmentation. Unlike previous methods, our stage-wise progressive augmentation adapts data augmentation across stages to better suit SSL on fine-grained datasets. The prototype-based contrastive learning module captures both holistic and partial patterns, extracting global and local image representations to enhance feature discriminability. Experiments on popular fine-grained benchmarks for classification and retrieval tasks demonstrate the effectiveness of our method, and extensive ablation studies confirm the superiority of our proposals.
